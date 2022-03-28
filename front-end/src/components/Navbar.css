@@ -1,0 +1,17 @@
+#container{
+    height: 10vh;
+    display: flex; 
+    background-color: #f36b49   ;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+.item{
+    padding-right: 2vw;
+}
+.item-name{
+    color: #e9e9e9 ;
+}
+.logo{
+    width: 10vh;
+    margin-right: auto;
+}
