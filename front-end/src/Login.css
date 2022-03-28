@@ -1,0 +1,40 @@
+body {
+    background-image: url("../public/Backgroundreal.png");
+    background-size: cover;
+}
+
+#LoginBox {
+    border: solid;
+    flex-direction: column;
+    width: 30vw;
+    margin-top: 15vh;
+    height: 55vh;
+    margin-left: 10vw;
+    padding: 60px;
+    border-radius: 25px;
+    background-color: white;
+    border-color: white;
+}
+
+#Loginheader {
+    font-size: 1.4em;
+    margin-top: 8vh;
+}
+
+#Userinputs {
+    width: 30vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 1.2em;
+}
+
+#SubmitButton {
+    margin-top: 20px;
+    text-align: center;
+    width: 30vw;
+    height: 5vh;
+    background-color: green;
+    font-size: 1.2em;
+}
