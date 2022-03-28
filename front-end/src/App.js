@@ -8,7 +8,7 @@ import Productdetail from "./pages/productdetail"
 
 function App() {
   return (
-      <div>
+      <>
         <Routes>
             <Route exact path="/" element={<Home />}/>
             <Route path="/login" element={<Login />}/>
@@ -16,7 +16,7 @@ function App() {
             <Route path="/productdetail" element={<Productdetail />}/>
             <Route path="*" element={<h1>404 not found</h1>}/>
         </Routes>
-    </div>
+    </>
   );
 }
 

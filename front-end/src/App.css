@@ -1,3 +1,17 @@
+html, body, #root {
+  width: 100vw;
+  height:100vh;
+}
+
+#root{
+
+}
+body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
 .App {
   text-align: center;
 }
