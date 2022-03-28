@@ -13,6 +13,11 @@ function Login() {
                 <input id="Userinputs" type="text" placeholder="Enter Your Email"/>
                 <input id="Userinputs" type="text" placeholder="Enter Your Password"/>
             <button id="SubmitButton" type="button">Submit</button>
+            <div id="Bottomtext">
+              <p>Help</p>
+              <p>Privacy</p>
+              <p>Terms</p>
+            </div>
         </div>
         
     
