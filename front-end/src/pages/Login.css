@@ -1,5 +1,5 @@
-body {
-    background-image: url("../public/Backgroundreal.png");
+#background {
+    background-image: url("../../public/Backgroundreal.png");
     background-size: cover;
 }
 
@@ -27,6 +27,7 @@ body {
     margin-bottom: 1vh;
     padding: 20px;
     box-sizing: border-box;
+    border-radius: 5px;
     font-size: 1.2em;
 }
 
@@ -35,6 +36,7 @@ body {
     text-align: center;
     width: 30vw;
     height: 5vh;
-    background-color: green;
+    border-radius: 25px;
+    background-color: #7CB442;
     font-size: 1.2em;
 }
