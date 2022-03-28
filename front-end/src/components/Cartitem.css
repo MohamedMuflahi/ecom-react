@@ -1,0 +1,9 @@
+#ItemInfo {
+    float: right;
+    margin-left: 20vh;
+    margin-right: 10vh;
+}
+
+#cardDisplay {
+    padding: 80px;
+}
