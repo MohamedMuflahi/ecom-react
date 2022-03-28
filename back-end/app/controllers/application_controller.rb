@@ -5,5 +5,17 @@ class ApplicationController < Sinatra::Base
   get "/" do
     { message: "Good luck with your project!" }.to_json
   end
+  get "/users" do
+    users = User.all
+    users.to_json
+  end
+  get "/products" do
+    products = Product.all
+    products.to_json
+  end
+  get "/reviews" do
+    reviews = Review.all
+    reviews.to_json
+  end
 
 end
