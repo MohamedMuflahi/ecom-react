@@ -9,16 +9,21 @@ function Cart() {
       <div id="cartTitle">
       <h1>Here's what you have in your cart.</h1>
         <h2>100% Free deliver and returns.</h2>
+        <button id="ContinueShopping" type="button">CONTINUE SHOPPING</button>
         </div>
       <div id="CartText">
+        <div id="ItemDiv">
         <Cartitem />
         <Cartitem />
+        <Cartitem />
+        <Cartitem />
+        </div>
         <div id="OrderSummary">
           <h1>ORDER SUMMARY</h1>
           <h2>Subtotal</h2>
           <h2>Estimated Shipping</h2>
           <h2>Estimated Total</h2>
-          <button id="CheckoutButton" type="button">Click Me!</button>
+          <button id="CheckoutButton" type="button">CHECKOUT NOW</button>
           <div id="paymentHere">
             <h4>Payment methods</h4>
             </div>
