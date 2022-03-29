@@ -6,8 +6,15 @@ import Login from './pages/login';
 import Cart from "./pages/cart"
 import Productdetail from "./pages/productdetail"
 import Signup from './pages/Signup';
+import React, { useState } from 'react';
 
 function App() {
+
+  const[cart, setCart] = useState([])
+
+  
+
+
   return (
       <>
         <Routes>
