@@ -1,13 +1,13 @@
 import React from 'react';
 import "./Card.css";
-function Card() {
+function Card({item}) {
   return (
     <li className='card'>
       <img src='https://civilrights.msu.edu/_assets/images/placeholder/placeholder-200x200.jpg' alt="cardImage" />
-      <h4>ItemName</h4>
-      <p>Price: $100.00</p>
+      <h4>{item.name}</h4>
+      <p>{`Price $ ${item.price}`}</p>
         <button className="primary">
-          In Stock
+          Add to Cart
         </button>
     </li>
   )
