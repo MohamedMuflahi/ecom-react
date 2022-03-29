@@ -18,6 +18,9 @@ class ApplicationController < Sinatra::Base
     reviews = Review.all
     reviews.to_json
   end
+  post "/products" do
+    Product.create(title: params[:title],description: params[:description],category: params[:category],price: params[:price],image: params[:image])
+  end
   post "/signup" do
     email = params[:email]
     pass = params[:password]

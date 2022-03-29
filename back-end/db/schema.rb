@@ -13,10 +13,11 @@
 ActiveRecord::Schema.define(version: 2022_03_28_144736) do
 
   create_table "products", force: :cascade do |t|
-    t.string "name"
-    t.string "desc"
+    t.string "title"
+    t.string "description"
     t.string "category"
-    t.integer "price"
+    t.float "price"
+    t.string "image"
   end
 
   create_table "reviews", force: :cascade do |t|
