@@ -9,7 +9,7 @@
 }
 
 #LoginBox {
-    border: solid;
+    border: 5px solid white;
     flex-direction: column;
     width: 30vw;
     height: 55vh;
@@ -32,6 +32,8 @@
     padding: 20px;
     box-sizing: border-box;
     border-radius: 5px;
+    border: 2px solid white;
+    border-color: rgb(165, 164, 164);
     font-size: 1.2em;
 }
 
@@ -39,10 +41,18 @@
     margin-top: 20px;
     text-align: center;
     width: 30vw;
-    height: 5vh;
+    height: 7vh;
     border-radius: 5px;
+    border: 2px solid #7CB442;
     background-color: #7CB442;
-    font-size: 1.2em;
+    font-size: 1.4em;
+    color: white;
+    font-weight: bold;
+    transition: background-color .2s;
+}
+
+#SubmitButton:hover {
+    background-color: #699b34;
 }
 
 #Bottomtext {
