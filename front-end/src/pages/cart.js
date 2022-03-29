@@ -1,15 +1,30 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Cartitem from '../components/Cartitem'
-
+import "./cart.css"
 function Cart() {
   return (
     <div>
       <Navbar />
-      <div id="CartText">
-        <h1>Here's what you have in your cart.</h1>
+      <div id="cartTitle">
+      <h1>Here's what you have in your cart.</h1>
         <h2>100% Free deliver and returns.</h2>
+        </div>
+      <div id="CartText">
         <Cartitem />
+        <Cartitem />
+        <div id="OrderSummary">
+          <h1>ORDER SUMMARY</h1>
+          <h2>Subtotal</h2>
+          <h2>Estimated Shipping</h2>
+          <h2>Estimated Total</h2>
+          <button id="CheckoutButton" type="button">Click Me!</button>
+          <div id="paymentHere">
+            <h4>Payment methods</h4>
+            </div>
+          <img id="payment" src="https://help.zazzle.com/hc/article_attachments/360010513393/Logos-01.png" alt="paymentoptions"/>
+          
+        </div>
       </div>
       
     </div>
