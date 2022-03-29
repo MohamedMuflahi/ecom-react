@@ -1,0 +1,26 @@
+#SearchContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+.cards {
+    list-style: none;
+  }
+
+  @media (min-width: 768px) {
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
