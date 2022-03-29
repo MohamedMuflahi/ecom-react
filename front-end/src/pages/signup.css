@@ -1,0 +1,102 @@
+
+#background {
+
+    background-image: url("../../public/Backgroundreal.png");
+    width: 100%;
+    height: 100%;
+    padding-top: 15vh;
+    background-size: cover;
+}
+#logo{
+    width: 8vh;
+    padding: 0px;
+    margin: 0px;
+}
+#LoginBox {
+    border: 5px solid white;
+    flex-direction: column;
+    width: 30vw;
+    height: 55vh;
+    margin-left: 10vw;
+    padding: 60px;
+    border-radius: 25px;
+    background-color: white;
+    border-color: white;
+}
+
+#Loginheader {
+    font-size: 1.4em;
+    margin-top: 8vh;
+}
+
+#Userinputs {
+    width: 100%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid white;
+    border-color: rgb(165, 164, 164);
+    font-size: 1.2em;
+}
+
+#SubmitButton {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    height: 7vh;
+    border-radius: 5px;
+    border: 2px solid #7CB442;
+    background-color: #7CB442;
+    font-size: 1.4em;
+    color: white;
+    font-weight: bold;
+    transition: background-color .2s;
+}
+
+#SubmitButton:hover {
+    background-color: #699b34;
+}
+
+#Bottomtext {
+    padding: 20px;
+    margin-top: 8vh;
+    margin-left: 21vw;
+    opacity: 90%;
+    font-size: 1.1em;
+}
+@media (max-width: 768px) {
+   #LoginBox{
+       width: 60vw;
+       margin-left: 5vw;
+   }
+  }
+  
+  @media (max-width: 1024px) {
+    
+  }
+  
+  @media (max-width: 1200px) {
+    
+  }
+
+#Namediv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#userInfo {
+    width: 47%;
+    display: inline-block;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid white;
+    border-color: rgb(165, 164, 164);
+    font-size: 1.2em;
+    
+}
