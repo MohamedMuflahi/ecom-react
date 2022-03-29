@@ -13,7 +13,7 @@ function App() {
         <Routes>
             <Route exact path="/" element={<Home />}/>
             <Route path="/login" element={<Login />}/>
-            <Route path="/Signup" element={<Signup />}/>
+            <Route path="/signup" element={<Signup />}/>
             <Route path="/cart" element={<Cart />}/>
             <Route path="/productdetail" element={<Productdetail />}/>
             <Route path="*" element={<h1>404 not found</h1>}/>

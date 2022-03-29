@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import './signup.css';
 
 function Signup() {
   return (
     <div id="background">
         <div id="LoginBox">
-            <img id='logo' src='https://i.ibb.co/KrDfhMc/2-0-500-250-px-250-250-px.png'/>
+            <Link to="/"><img id='logo' src='https://i.ibb.co/KrDfhMc/2-0-500-250-px-250-250-px.png'/></Link>
             <div id="Loginheader">
                 <h3>Sign up!</h3>
                 <p>Continue to Shopify 2.0</p>
