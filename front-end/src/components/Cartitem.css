@@ -1,9 +1,13 @@
 #ItemInfo {
-    float: right;
-    margin-left: 20vh;
-    margin-right: 10vh;
+ margin-left: 2vw;
 }
 
 #cardDisplay {
+    display: flex;
+    flex-direction: row;
     padding: 80px;
+    border: 2px solid #E9E9E9;
+    background-color: #E9E9E9;
+    margin-bottom: 2vh;
+    margin-right: 2vw;
 }
