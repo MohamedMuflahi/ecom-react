@@ -7,10 +7,9 @@
 #CartText{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    padding: 30px;
+    justify-content: center;
+    padding: 40px;
     font-family: "Playfair Display", serif;
-    
 }
 @media (max-width: 768px) {
     #CartText{
@@ -29,11 +28,13 @@
     align-items: flex-start;
     background-color: #FFC490;
     width: 20vw;
-    height: 40vh;
+    height: 38vh;
     padding: 15px;
     border-radius: 2px;
     border: 2px solid #FFC490;
 }
+
+
 
 #CheckoutButton {
     margin-top: 20px;
@@ -57,10 +58,33 @@
     width: 60%;
     height: auto;
     margin-bottom: -1vh;
-    margin-left: 8vw;
+    margin-left: 7.7vw;
 }
 
 #paymentHere {
     margin-bottom: -2vh;
     margin-left: 14vw;
+}
+
+#ContinueShopping {
+    margin-left: 76vw;
+    display: fixed;
+    margin-top: -10vh;
+    width: 20vw;
+    height: 7vh;
+    border-radius: 5px;
+    border: 2px solid rgb(164, 164, 164);
+    background-color: white;
+    font-size: 1.4em;
+    color: black;
+    font-weight: bold;
+    transition: background-color .2s;
+}
+
+#ContinueShopping:hover {
+    background-color:rgb(164, 164, 164);
+}
+#ItemDiv{
+    display: flex;
+    flex-direction: column;
 }
