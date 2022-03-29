@@ -1,12 +1,15 @@
 require 'faker'
 puts "🌱 Seeding Users..."
 50.times do 
-    User.create(username: Faker::Name.unique.name, password:Faker::Bank.account_number, email: Faker::Internet.unique.email)
+    User.create(password:Faker::Bank.account_number, email: Faker::Internet.unique.email)
 end
 
 puts "🌱 Seeding Products..."
+category = [
+    "Beauty","Home", "Furniture","Kids","Toys","Shoes","Jewelry","Gifts"
+]
 50.times do 
-Product.create(name: Faker::Commerce.product_name,desc: Faker::Quote.famous_last_words, price: Faker::Number.between(from: 1, to: 500))
+Product.create(name: Faker::Commerce.product_name,desc: Faker::Quote.famous_last_words, price: Faker::Number.between(from: 1, to: 500),category: category.sample)
 end
 puts "🌱 Seeding Reviews..."
 50.times do 
