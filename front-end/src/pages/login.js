@@ -12,7 +12,7 @@ function Login() {
                 <p>Continue to Shopify 2.0</p>
             </div>
                 <input id="Userinputs" type="text" placeholder="Enter Your Email"/>
-                <input id="Userinputs" type="text" placeholder="Enter Your Password"/>
+                <input id="Userinputs" type="password" placeholder="Enter Your Password"/>
             <button id="SubmitButton" type="button">Submit</button>
         </div>
         

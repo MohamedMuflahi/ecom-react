@@ -1,4 +1,5 @@
 class ApplicationController < Sinatra::Base
+  require 'bcrypt'
   set :default_content_type, 'application/json'
   
   # Add your routes here
@@ -16,6 +17,28 @@ class ApplicationController < Sinatra::Base
   get "/reviews" do
     reviews = Review.all
     reviews.to_json
+  end
+  post "/products" do
+    Product.create(title: params[:title],description: params[:description],category: params[:category],price: params[:price],image: params[:image])
+  end
+  post "/signup" do
+    email = params[:email]
+    pass = params[:password]
+    if(User.find_by(email: email))
+      return
+    else
+      User.create(password: BCrypt::Password.create(pass), email: email)
+    end
+  end
+  post "/login" do
+    email = params[:email]
+    pass = params[:password]
+    y = User.find_by(email: email)
+    x = BCrypt::Password.new(y.password)
+    if(x == pass)
+      return y.to_json
+    end
+
   end
 
 end
