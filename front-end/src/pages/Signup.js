@@ -1,8 +1,36 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Link } from "react-router-dom"
 import './signup.css';
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [first_name, setFirstName] = useState('');
+  const [last_name, setLastName] = useState('');
+  const [error, setError] = useState('');
+  function handleClick(){
+    let data = {
+      email,
+      password,
+      first_name,
+      last_name
+    }
+    fetch('http://localhost:9292/signup',{
+      method: "POST",
+      headers: {'Content-Type': 'application/json'}, 
+      body: JSON.stringify(data)
+    })
+    .then(resp=> resp.json())
+    .then(data=>{
+      navigate("/login");
+    })
+    .catch(error => {
+      setError('Account Already Exits');
+      console.log(error)
+    })
+  }
   return (
     <div id="background">
         <div id="LoginBox">
@@ -12,12 +40,13 @@ function Signup() {
                 <p>Continue to Shopify 2.0</p>
             </div>
             <div id="Namediv">
-                <input id="userInfo" type="text" placeholder="Enter Your First Name"/>
-                <input id="userInfo" type="text" placeholder="Enter Your Last Name"/>
+                <input id="userInfo" type="text" placeholder="Enter Your First Name" value={first_name} onChange={(e)=> setFirstName(e.target.value)}/>
+                <input id="userInfo" type="text" placeholder="Enter Your Last Name" value={last_name} onChange={(e)=> setLastName(e.target.value)}/>
                 </div>
-                <input id="Userinputs" type="text" placeholder="Enter Your Email"/>
-                <input id="Userinputs" type="text" placeholder="Enter Your Password"/>
-            <button id="SubmitButton" type="button">Create Account</button>
+                <input id="Userinputs" type="text" placeholder="Enter Your Email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
+                <input id="Userinputs" type="password" placeholder="Enter Your Password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
+            <button id="SubmitButton" type="button" onClick={handleClick}>Create Account</button>
+            {error? <p className='error'>{error}</p>: null}
         </div>
         
     
