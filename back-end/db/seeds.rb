@@ -2,9 +2,9 @@ require 'faker'
 require 'bcrypt'
 
 puts "🌱 Seeding Users..."
-User.create(password: BCrypt::Password.create("123"), email: "Test@gmail.com")
+User.create(first_name: Faker::Name.first_name,last_name:Faker::Name.last_name,password: BCrypt::Password.create("123"), email: "Test@gmail.com")
 50.times do 
-    User.create(password: BCrypt::Password.create(Faker::Bank.account_number), email: Faker::Internet.unique.email)
+    User.create(first_name:Faker::Name.first_name,last_name: Faker::Name.last_name,password: BCrypt::Password.create(Faker::Bank.account_number), email: Faker::Internet.unique.email)
 end
 
 puts "🌱 Seeding Products..."

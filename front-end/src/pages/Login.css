@@ -27,10 +27,9 @@
 
 #Loginheader {
     font-size: 1.4em;
-    margin-top: 8vh;
 }
 
-#Userinputs {
+.Userinputs {
     width: 100%;
     margin-top: 1vh;
     margin-bottom: 1vh;
@@ -80,4 +79,9 @@
   
   @media (max-width: 1200px) {
     
+  }
+  .error{
+      color: red;
+      font-size: large;
+      font-weight: bold;
   }

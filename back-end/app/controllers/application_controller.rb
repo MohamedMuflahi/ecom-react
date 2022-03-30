@@ -24,20 +24,39 @@ class ApplicationController < Sinatra::Base
   post "/signup" do
     email = params[:email]
     pass = params[:password]
+    first = params[:first_name]
+    last = params[:last_name]
     if(User.find_by(email: email))
-      return
+      return (
+        status 401
+        body 'Account already exists'
+      )
     else
-      User.create(password: BCrypt::Password.create(pass), email: email)
+      u = User.create(first_name: first,last_name: last,password: BCrypt::Password.create(pass), email: email)
+      u.to_json
     end
   end
   post "/login" do
     email = params[:email]
     pass = params[:password]
     y = User.find_by(email: email)
-    x = BCrypt::Password.new(y.password)
-    if(x == pass)
-      return y.to_json
-    end
+    if(y)
+      x = BCrypt::Password.new(y.password)
+      if(x == pass)
+        return y.to_json
+      else
+        return (
+          status 401
+          body 'Incorrect Credentials Try again :D'
+        )
+      end
+  else
+    return(
+      status 401 
+      body "Account Doesn't exist"
+    )
+  end
+    
 
   end
 
