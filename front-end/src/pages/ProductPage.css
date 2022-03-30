@@ -1,21 +1,29 @@
+#product-all {
+    flex-direction: row;
+    display: flex;
+}
+
 #product-pic {
     display: flex;
-    flex-direction: row;
-    margin-left: 20%;
+    margin-left: 10%;
     margin-top: 10vh;
 }
 
 #product-info {
     display: block;
-    float: right;
-    margin-top: -60vh;
-    margin-right: 15vw;
+    flex-direction: column;
+    margin-left: 50vw;
+    margin-top: -55vh;
     font-size: 1.8em;
 }
 
 #related-items {
-    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: -60vh;
+    margin-left: 1vw;
     padding: 50px;
+    margin-left: 2vw;
 }
 
 #bag-option {
@@ -39,4 +47,15 @@
     justify-content: center;
     align-items: center;
 
+}
+
+#breakline {
+    margin-top: 10vh;
+    width: 85%;
+}
+
+#review-section {
+    margin-left: 5vw;
+    margin-top: 2vh;
+    font-size: 1.5em;
 }
