@@ -6,7 +6,6 @@ import "./cart.css"
 
 function Cart() {
 
-
   return (
     <div>
       <Navbar />
@@ -15,9 +14,9 @@ function Cart() {
         <h2>100% Free deliver and returns.</h2>
         <Link to="/"><button id="ContinueShopping" type="button">CONTINUE SHOPPING</button></Link>
         </div>
+
       <div id="CartText">
         <div id="ItemDiv">
-        <Cartitem />
         <Cartitem />
         <Cartitem />
         <Cartitem />
@@ -29,7 +28,7 @@ function Cart() {
           <h2>Estimated Total</h2>
           <button id="CheckoutButton" type="button" >CHECKOUT NOW</button>
           <div id="paymentHere">
-            <h4>Payment methods</h4>
+            <button><h4>Payment methods</h4></button>
             </div>
           <img id="payment" src="https://help.zazzle.com/hc/article_attachments/360010513393/Logos-01.png" alt="paymentoptions"/>
           
