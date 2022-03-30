@@ -2,12 +2,27 @@
     margin-left: 2vw;
 }
 
+#remove-button {
+    margin-left: 1vw;
+    margin-top: 8vh;
+    border: 2px solid #FFC490;
+    padding: 5px;
+    background-color: #FFC490;
+    color: black;
+}
+
 #cardDisplay {
     display: flex;
+    width: 25vw;
     flex-direction: row;
     padding: 80px;
     border: 2px solid #E9E9E9;
     background-color: #E9E9E9;
     margin-bottom: 2vh;
     margin-right: 2vw;
+    transition: box-shadow .2s;
+}
+
+#cardDisplay:hover {
+    box-shadow: 1px 1px 20px 10px black;
 }

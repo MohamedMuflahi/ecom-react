@@ -1,10 +1,15 @@
 import React,{useState,useEffect} from 'react'
 import Card from './Card';
+
 import "./Products.css"
 function Products() {
   const [products, setProducts ] = useState([])
   const [searchTerm, setSearchTerm] = useState('');
   const [searchCat, setSearchCat] = useState("men's clothing")
+
+
+
+
   useEffect(() => {
    fetch("http://localhost:9292/products")
    .then(resp=> resp.json())
