@@ -9,7 +9,7 @@ function Cartitem() {
             <h2 id="ItemInfo">Name</h2>
             <h2 id="ItemInfo">Qty: </h2>
             <h2 id="ItemInfo">Price</h2>
-            <h3 id="remove-button">Remove From Cart</h3>
+            <button id="remove-button">Remove From Cart</button>
         </div>
     </div>
   )

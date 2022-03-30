@@ -5,11 +5,17 @@
 #remove-button {
     margin-left: 1vw;
     margin-top: 11vh;
-    border: 2px solid #FFC490;
+    border: 1px solid #FFC490;
     padding: 5px;
     background-color: #FFC490;
     font-size: .9em;
     color: black;
+    transition: background-color .2s;
+}
+
+#remove-button:hover {
+    background-color: black;
+    color: white;
 }
 
 #cardDisplay {
