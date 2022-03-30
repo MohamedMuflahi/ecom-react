@@ -1,6 +1,7 @@
 #cartTitle {
     padding-left: 30px;
-    padding-top: 1vh
+    padding-top: 1vh;
+    font-family: "Hikou Regular";
 }
 
 
@@ -27,12 +28,12 @@
     display: fixed;
     align-items: flex-start;
     background-color: #FFC490;
-    width: 20vw;
+    width: 22vw;
     position: fixed;
-    height: 38vh;
+    height: 45vh;
     padding: 15px;
     border-radius: 2px;
-    margin-left: 30vw;
+    margin-left: 40vw;
     border: 2px solid #FFC490;
 }
 
@@ -41,7 +42,7 @@
 #CheckoutButton {
     margin-top: 20px;
     text-align: center;
-    width: 20vw;
+    width: 22vw;
     height: 7vh;
     border-radius: 5px;
     border: 2px solid rgb(62, 62, 62);
