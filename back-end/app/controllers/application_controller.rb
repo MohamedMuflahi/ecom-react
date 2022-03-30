@@ -2,14 +2,17 @@ class ApplicationController < Sinatra::Base
   require 'bcrypt'
   set :default_content_type, 'application/json'
   
+  configure do
+    enable :sessions 
+    set :session_secret, "secret"
+  end
   # Add your routes here
   get "/" do
     { message: "Good luck with your project!" }.to_json
   end
-  get "/users" do
-    users = User.all
-    users.to_json
-  end
+  get "/user" do
+    User.find_by_id(session[:user_id]).to_json
+end
   get "/products" do
     products = Product.all
     products.to_json
@@ -43,7 +46,8 @@ class ApplicationController < Sinatra::Base
     if(y)
       x = BCrypt::Password.new(y.password)
       if(x == pass)
-        return y.to_json
+        session[:user_id] = y.id
+        y.to_json
       else
         return (
           status 401
@@ -59,5 +63,22 @@ class ApplicationController < Sinatra::Base
     
 
   end
+  get '/logout' do
+    session.clear
+end 
+
+  helpers do # makes these methods availble to controller and views
+
+    # return the logged in user
+   def current_user # return logged in user 
+    @current_user ||= User.find_by_id(session[:user_id]) #memoization
+   end 
+
+    # check if a user logged in
+    def logged_in?
+      !!session[:user_id]
+    end 
+
+  end 
 
 end

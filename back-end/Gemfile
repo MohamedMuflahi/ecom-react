@@ -5,6 +5,8 @@ source "https://rubygems.org"
 gem "sinatra", "~> 2.1"
 gem "bcrypt"
 gem "faker"
+gem 'jwt'
+gem 'json'
 # A fast and simple web server
 # https://github.com/macournoyer/thin
 gem "thin", "~> 1.8"
