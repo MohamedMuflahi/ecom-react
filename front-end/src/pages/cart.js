@@ -28,7 +28,7 @@ function Cart() {
           <h2>Estimated Total</h2>
           <button id="CheckoutButton" type="button" >CHECKOUT NOW</button>
           <div id="paymentHere">
-            <button><h4>Payment methods</h4></button>
+            <h4>Payment methods</h4>
             </div>
           <img id="payment" src="https://help.zazzle.com/hc/article_attachments/360010513393/Logos-01.png" alt="paymentoptions"/>
           
