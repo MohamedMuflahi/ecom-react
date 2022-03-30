@@ -1,0 +1,17 @@
+#ItemInfo {
+    margin-left: 1vw;
+
+}
+
+#cardDisplay {
+    padding: 10px;
+    border: 2px solid #E9E9E9;
+    background-color: #E9E9E9;
+    margin-bottom: 2vh;
+    margin-right: 1vw;
+}
+
+#relatedpic {
+    width: 25%;
+    height: auto;
+}
