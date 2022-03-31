@@ -1,13 +1,13 @@
 import React from 'react';
 import "./Card.css";
 function Card({item}) {
-    function handleClick(){
-      let cart = JSON.parse(localStorage.getItem('cart'));
-      let newcart = [...cart,item]
-      localStorage.setItem('cart',JSON.stringify(newcart))
-    }
-
-    return (
+  function handleClick(){
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    let newcart = [...cart,item]
+    localStorage.setItem('cart',JSON.stringify(newcart))
+  }
+ 
+  return (
     <li className='card'>
       <img src={item.image} alt="cardImage" />
       <h4>{item.title}</h4>
