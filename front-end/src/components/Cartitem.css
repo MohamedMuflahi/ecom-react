@@ -1,35 +1,33 @@
-#ItemInfo {
-    margin-left: 2vw;
-}
-
-#remove-button {
-    margin-left: 1vw;
-    margin-top: 11vh;
-    border: 0px solid #FFC490;
-    padding: 5px;
-    background-color: #FFC490;
-    font-size: .9em;
-    color: black;
-    transition: background-color .2s;
-}
-
-#remove-button:hover {
-    background-color: black;
-    color: white;
-}
-
-#cardDisplay {
-    display: flex;
-    width: 35vw;
-    flex-direction: row;
-    padding: 80px;
-    border: 2px solid #E9E9E9;
-    background-color: #E9E9E9;
+.card-div{
+    display: grid;
+    grid-template: 20vh/ 30% 70%;
     margin-bottom: 2vh;
-    margin-right: 2vw;
-    transition: box-shadow .2s;
+    box-shadow: rgb(229 229 229) 0px 0px 0px 0px inset, rgb(229 229 229) 0px 0px 0px 0px inset, rgb(229 229 229) 0px -1px 0px 0px inset, rgb(229 229 229) 0px 0px 0px 0px inset;
 }
-
-#cardDisplay:hover {
-    box-shadow: 1px 1px 20px 10px black;
+.card-div h2{
+    margin-bottom: 5vh;
+}
+.item-image{
+    width: 50%;
+    height: 70%;
+    padding: 10%;
+}
+.info-div{
+    display: flex;
+    flex-direction: column;
+}
+.info-div-item{
+    margin: 0;
+}
+.remove-button{
+    margin-top: 1vh;
+    width: 8.5%;
+    height: 25%;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 90px;
+}
+.remove-button:hover{
+    transform: scale(1.2);
 }
