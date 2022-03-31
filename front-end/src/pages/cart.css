@@ -1,48 +1,71 @@
+
 #cartTitle {
     padding-left: 30px;
-    padding-top: 1vh;
-    font-family: "Hikou Regular";
+    padding-top: 1vh
 }
+.total-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.total-item{
+    margin-left: auto;
+}
+.cart-container{
+    display: grid;
+    margin-top: 5vh;
+    grid-template: 100vh /  20% 40% 30% 10%;
+    /* background-color: black; */
+    width: 100vw;
+    height: 100vh;
+}
+.cart-box{
+    /* border: 2px solid black;
+    background-color: red; */
+}
+.cart-items{
+    display: flex;
+    flex-direction: column;
+}
+.cart-checkout{
+    margin-left: 2.5vw;
+    height: 40%;
+}
+.cart-checkout p {
+    font-size: large;
+}
+.cart-checkout button{
+    margin-top: 2vh;
+    margin-left: 15%;
+    width: 70%;
+    height: 20%;
+    background-color: black;
+    border-radius: 90px;
+    color: white;
+    font-size: x-large;
 
-
+}
+.cart-checkout button:hover{
+    transform: scale(1.1);
+}
 #CartText{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    padding: 60px;
     font-family: "Playfair Display", serif;
 }
-@media (max-width: 768px) {
-    #CartText{
-        display: block;
-    }
-}
-
-@media (max-width: 1500px) {
-    #CartText{
-        display: block;
-    }
-}
-
 #OrderSummary {
-    display: fixed;
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
     background-color: #FFC490;
-    width: 22vw;
-    position: fixed;
-    height: 45vh;
-    padding: 15px;
-    border-radius: 2px;
-    margin-left: 40vw;
+    width: 20vw;
+    height: 38vh;
     border: 2px solid #FFC490;
 }
-
-
-
 #CheckoutButton {
     margin-top: 20px;
     text-align: center;
-    width: 22vw;
+    width: 20vw;
     height: 7vh;
     border-radius: 5px;
     border: 2px solid rgb(62, 62, 62);
