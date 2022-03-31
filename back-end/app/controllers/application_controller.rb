@@ -17,9 +17,13 @@ end
     products = Product.all
     products.to_json
   end
-  get "/reviews" do
-    reviews = Review.all
-    reviews.to_json
+  get "/reviews/:id" do
+    reviews = Review.where(product_id: params[:id])
+    reviews.to_json(include: { user: { only: [:first_name] }})
+  end
+  post '/review'do 
+    review =Review.create(content: params[:content], rating: params[:rating] ,user_id: params[:user_id],product_id: params[:product_id]);
+    review.to_json
   end
   post "/products" do
     Product.create(title: params[:title],description: params[:description],category: params[:category],price: params[:price],image: params[:image])
