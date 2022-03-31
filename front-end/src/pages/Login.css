@@ -7,6 +7,13 @@
     padding-top: 15vh;
     background-size: cover;
 }
+.link{
+    text-decoration: none;
+    color:#699b34
+}
+.link:hover{
+    font-size: large;
+}
 #logo{
     width: 8vh;
     padding: 0px;

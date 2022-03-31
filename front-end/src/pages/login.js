@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Login.css';
 import { useNavigate } from "react-router-dom";
 import { login } from '../userSlice';
@@ -19,11 +19,13 @@ function Login() {
     fetch('http://localhost:9292/login',{
       method: "POST",
       headers: {'Content-Type': 'application/json'}, 
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
+      credentials: "same-origin",
     })
     .then(resp=> resp.json())
-    .then(d=>{
-      dispatch(login(d))
+    .then(data=>{
+      localStorage.setItem("user",JSON.stringify(data));
+      //console.log(data)
       navigate("/");
     })
     .catch(error => {
@@ -43,6 +45,7 @@ function Login() {
                 <input className="Userinputs" type="text" placeholder="Enter Your Email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
                 <input className="Userinputs" type="password" placeholder="Enter Your Password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
             <button id="SubmitButton" type="button" onClick={handleClick}>Submit</button>
+            <p>dont' have an account,</p><NavLink to='/signup' className='link'>Sign up here</NavLink>
             {error? <p className='error'>{error}</p>: null}
         </div>
     </div>
