@@ -1,15 +1,20 @@
 import React from 'react'
 import './Cartitem.css';
 
-function Cartitem() {
+function Cartitem({item,setCart}) {
+  function handleClick(){
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    let newcart = cart.filter((e)=> e.id !== item.id)
+    localStorage.setItem('cart',JSON.stringify(newcart))
+    setCart(newcart);
+  }
   return (
-    <div id="cardDisplay">
-        <img src="https://wtwp.com/wp-content/uploads/2015/06/placeholder-image.png" alt="placeholder"/>
-        <div id="ItemInfo">
-            <h2 id="ItemInfo">Name</h2>
-            <h2 id="ItemInfo">Qty: </h2>
-            <h2 id="ItemInfo">Price</h2>
-            <h3 id="remove-button">Remove From Cart</h3>
+    <div className='card-div'>
+        <img className='item-image' src={item.image} alt="placeholder"/>
+        <div className="info-div">
+            <h2 className="info-div-item">{item.title}</h2>
+            <h3 className="info-div-item">${item.price}</h3>
+            <button className="remove-button" on onClick={handleClick}>X</button>
         </div>
     </div>
   )

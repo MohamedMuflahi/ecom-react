@@ -37,3 +37,7 @@
     width: 10vh;
 
   }
+  .card button:hover{
+    transition: transform 1s;
+    transform: scale(1.2);
+  }

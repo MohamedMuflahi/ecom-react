@@ -7,13 +7,11 @@ function Products() {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchCat, setSearchCat] = useState("men's clothing")
 
-
-
-
   useEffect(() => {
    fetch("http://localhost:9292/products")
    .then(resp=> resp.json())
    .then(data => {
+     console.log(data)
     setProducts(data)
    })
   }, [])

@@ -46,7 +46,9 @@ end
     if(y)
       x = BCrypt::Password.new(y.password)
       if(x == pass)
-        session[:user_id] = y.id
+        # user_cookie = request.env['HTTP_COOKIE']
+        # session[:user_id] = y.id
+        # {cookie: user_cookie}.to_json
         y.to_json
       else
         return (
@@ -60,8 +62,6 @@ end
       body "Account Doesn't exist"
     )
   end
-    
-
   end
   get '/logout' do
     session.clear
