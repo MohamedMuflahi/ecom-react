@@ -7,6 +7,11 @@ function Navbar() {
   const [userInfo, setUserInfo] = useState({name: null})
   const [loggedIn, setLoggedIn] = useState(false)
 useEffect(() => {
+  if(JSON.parse(localStorage.getItem('user')) === null){
+    localStorage.setItem('user',JSON.stringify({name: null}));
+    localStorage.setItem('cart',JSON.stringify([]));
+    localStorage.setItem('product-detail',JSON.stringify({}));
+  }
   setUserInfo(JSON.parse(localStorage.getItem('user')));
  if(JSON.parse(localStorage.getItem('user')).name === undefined){
    setLoggedIn(true)
