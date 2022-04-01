@@ -11,7 +11,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    
+    margin-top: 8vh;
 }
 .product-detail img{
    width: 30%;
@@ -72,6 +72,7 @@
     color: white;
     font-size: large;
     margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 .review-field{
     width: 30vw;
@@ -90,4 +91,9 @@
         width: 50%;
         height: 60%;
     }
+}
+
+#reviewline {
+    width: 85%;
+    color: gray;
 }

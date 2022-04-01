@@ -10,6 +10,7 @@ function Home() {
     <div>
       <Navbar/>
       <Hero />
+      <hr id="pagebreak"></hr>
       <Products />
     </div>
   )

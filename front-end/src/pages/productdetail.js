@@ -62,7 +62,7 @@ function Productdetail() {
   }, [])
   
   return (
-    <>
+    <div>
       <Navbar />
       {/* <div className="product-detail-container"> */}
         <div className="product-detail">
@@ -81,18 +81,23 @@ function Productdetail() {
         </div>
         <div className='review-container'>
         <h1 style={{textAlign: 'center'}}>Reviews</h1>
-        {reviews.map((item)=>{
-        return (
-          <Reviewcard key={item.id} item={item} className='review'/>
-        )
-      })}
         <div className='add-review'>
         <input className='review-field' type="text" placeholder="5 stars please" value={reviewInput} onChange={(e)=> setReviewInput(e.target.value)}/>
         <Rating onClick={handleRating} ratingValue={rating} /* Available Props */ />
         <button onClick={handleSubmite}>Write a Review!</button>
         </div>
+        {reviews.map((item)=>{
+        return (
+          <div>
+          <hr id="reviewline"></hr> 
+          <Reviewcard key={item.id} item={item} className='review'/>
+          </div>
+        )
+      })}
+       
         </div>
-    </>
+        </div>
+      
   );
 }
 

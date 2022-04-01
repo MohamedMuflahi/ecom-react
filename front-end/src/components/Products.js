@@ -18,21 +18,21 @@ function Products() {
   const itemsToDipslay = products.filter(item => item.category.toLowerCase() == searchCat.toLowerCase()).filter(item => item.title.toLowerCase().includes(searchTerm.toLowerCase()));
   return (
     <>
+      <h1 id="productheader">Our Products</h1>
         <div id="SearchContainer">
       <div className="items">
         <form>
-        <label htmlFor="search">Search Products:    </label>
             <input 
               type="text"
         id="search"
-        placeholder="Type a name to search..."
+        placeholder="Type a product to search..."
         value={searchTerm}
         onChange={(e)=> setSearchTerm(e.target.value)}
             />
         </form>
       </div>
-      <div className="items">
-        <select defaultValue={"men's clothing"} onChange={(e)=> setSearchCat(e.target.value)}>
+      <div className="items" >
+        <select id="downbar" defaultValue={"men's clothing"} onChange={(e)=> setSearchCat(e.target.value)}>
           <option value="men's clothing">men's clothing</option> 
           <option value="jewelery">jewelery</option>
           <option value="electronics">electronics</option>
