@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/react-redux": "^7.1.23",
     "react": "^17.0.2",
+    "react-confetti": "^6.0.1",
     "react-dom": "^17.0.2",
     "react-items-carousel": "^2.8.0",
     "react-multi-carousel": "^2.8.0",
@@ -16,6 +17,8 @@
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
     "react-simple-star-rating": "^4.0.5",
+    "react-typewriter-effect": "^1.1.0",
+    "react-use-window-size": "^1.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

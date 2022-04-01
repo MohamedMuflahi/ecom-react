@@ -20,9 +20,8 @@
     margin: 0;
 }
 .remove-button{
-    margin-top: 4vh;
-    margin-left: 25vw;
-    width: 8.5%;
+    margin-left: 90%;
+    width: 5vh;
     height: 25%;
     background-color: red;
     color: white;
@@ -33,4 +32,8 @@
     transform: scale(1.2);
 }
 
-
+@media (max-width: 1200px){
+    .remove-button{
+        margin-left: 70%;
+    }
+}

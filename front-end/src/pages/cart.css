@@ -19,17 +19,15 @@
     width: 100vw;
     height: 100vh;
 }
-.cart-box{
-    /* border: 2px solid black;
-    background-color: red; */
-}
 .cart-items{
     display: flex;
     flex-direction: column;
 }
 .cart-checkout{
     margin-left: 2.5vw;
+    margin-right: 2.5vw;
     height: 40%;
+    width: 95%;
 }
 .cart-checkout p {
     font-size: large;
@@ -93,10 +91,7 @@
 }
 
 #ContinueShopping {
-    margin-left: 76vw;
-    display: fixed;
-    margin-top: -10vh;
-    width: 20vw;
+    width: 35vh;
     height: 7vh;
     border-radius: 5px;
     border: 2px solid rgb(164, 164, 164);
@@ -114,4 +109,13 @@
     display: flex;
     flex-direction: column;
     margin-right: 30vw;
+}
+@media (max-width: 1200px) {
+    .cart-container{
+        display: block;
+    }
+    .cart-checkout{
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

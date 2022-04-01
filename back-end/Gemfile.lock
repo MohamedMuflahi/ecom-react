@@ -81,6 +81,7 @@ GEM
       activerecord (>= 4.1)
       sinatra (>= 1.0)
     sqlite3 (1.4.2)
+    stripe (5.48.0)
     thin (1.8.1)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
@@ -114,6 +115,7 @@ DEPENDENCIES
   sinatra (~> 2.1)
   sinatra-activerecord (~> 2.0)
   sqlite3 (~> 1.4)
+  stripe
   thin (~> 1.8)
 
 BUNDLED WITH

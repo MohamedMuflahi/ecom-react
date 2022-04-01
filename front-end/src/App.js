@@ -8,7 +8,8 @@ import Products from './components/Products';
 import Productdetail from "./pages/productdetail"
 import Signup from './pages/Signup';
 import React, { useState } from 'react';
-
+import Success from './pages/success'
+import Failure from './pages/failure'
 function App() {
 
 
@@ -21,6 +22,8 @@ function App() {
             <Route path="/signup" element={<Signup />}/>
             <Route path="/cart" element={<Cart />}/>
             <Route path="/productdetail" element={<Productdetail  />}/>
+            <Route path="/success" element={<Success />}/>
+            <Route path="/failure" element={<Failure />}/>
             <Route path="*" element={<h1>404 not found</h1>}/>
         </Routes>
     </>

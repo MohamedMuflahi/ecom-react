@@ -13,6 +13,23 @@ function Cart() {
   let total = 0;
   cart.forEach(e=> total += e.price)
   let tax = (Math.floor((total*0.0875) * 100) / 100).toFixed(2)
+  function handleCheckout(){
+    fetch('http://localhost:9292/create-checkout-session',{
+      method: "POST",
+      headers: {'Content-Type': 'application/json'}, 
+      body: JSON.stringify({
+        price: 'prod_LQKKfH7pFt4BQq'
+      }),
+      credentials: "same-origin",
+    })
+    .then(resp=> resp.json())
+    .then(data=>{
+      window.location.href = data.url;
+    })
+    .catch(error => {
+      
+    })
+  }
   return (
     <div>
       <Navbar />
@@ -53,7 +70,7 @@ function Cart() {
             <p className='total-item'>${(Math.floor((total + (total*0.0875)) * 100) / 100).toFixed(2)}</p>
             </div>
             <hr></hr>
-            <button>Checkout</button>
+            <button onClick={handleCheckout}>Checkout</button>
           </div>
           <div className=''></div>
         </div>
