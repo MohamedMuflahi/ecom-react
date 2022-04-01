@@ -5,10 +5,13 @@
     height: 18vh;
 }
 .card-display h3{
-    text-align: center;
+    margin-left: 7vw;
 }
 #reviewInfo {
     margin-top: 7.5vh;
     margin-left: 40vw;
     margin-right: 5vw;
+}
+.rating-counter{
+    margin-left: 7vw;
 }

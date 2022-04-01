@@ -73,17 +73,15 @@ function Productdetail() {
           <div className="product-detail-right">
             <h1>{item.title}</h1>
             <h3>${item.price}</h3>
-            <h4>Reviews</h4>
-            <button type="button"onClick={handleClick}>
-              Add To Your Cart
-            </button>
+            <button type="button"onClick={handleClick}>Add To Your Cart</button>
+            <p style={{marginTop: 100,maxWidth: 500,textAlign: 'center'}}>{item.description}</p>
           </div>
         </div>
         <div className='review-container'>
         <h1 style={{textAlign: 'center'}}>Reviews</h1>
         <div className='add-review'>
         <input className='review-field' type="text" placeholder="5 stars please" value={reviewInput} onChange={(e)=> setReviewInput(e.target.value)}/>
-        <Rating onClick={handleRating} ratingValue={rating} /* Available Props */ />
+        <Rating onClick={handleRating} ratingValue={rating}/>
         <button onClick={handleSubmite}>Write a Review!</button>
         </div>
         {reviews.map((item)=>{
