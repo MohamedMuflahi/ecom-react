@@ -17,7 +17,7 @@ function Signup() {
       first_name,
       last_name
     }
-    fetch('http://localhost:9292/signup',{
+    fetch('https://protected-lake-99843.herokuapp.com/signup',{
       method: "POST",
       headers: {'Content-Type': 'application/json'}, 
       body: JSON.stringify(data)

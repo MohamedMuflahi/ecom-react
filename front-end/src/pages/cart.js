@@ -14,7 +14,7 @@ function Cart() {
   cart.forEach(e=> total += e.price)
   let tax = (Math.floor((total*0.0875) * 100) / 100).toFixed(2)
   function handleCheckout(){
-    fetch('http://localhost:9292/create-checkout-session',{
+    fetch('https://protected-lake-99843.herokuapp.com/create-checkout-session',{
       method: "POST",
       headers: {'Content-Type': 'application/json'}, 
       body: JSON.stringify({

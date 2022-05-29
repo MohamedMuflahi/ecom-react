@@ -28,7 +28,7 @@ function Productdetail() {
         user_id: user.id,
         product_id: item.id
       }
-      fetch('http://localhost:9292/review',{
+      fetch('https://protected-lake-99843.herokuapp.com/review',{
       method: "POST",
       headers: {'Content-Type': 'application/json'}, 
       body: JSON.stringify(data),
@@ -53,7 +53,7 @@ function Productdetail() {
   
   useEffect(() => {
     setItem((item)=> item = JSON.parse(localStorage.getItem('product-detail')));
-    fetch(`http://localhost:9292/reviews/${JSON.parse(localStorage.getItem('product-detail')).id}`)
+    fetch(`https://protected-lake-99843.herokuapp.com/reviews/${JSON.parse(localStorage.getItem('product-detail')).id}`)
     .then(resp=> resp.json())
     .then(data =>{
       console.log(data)

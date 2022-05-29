@@ -8,7 +8,7 @@ function Products() {
   const [searchCat, setSearchCat] = useState("Electronics")
 
   useEffect(() => {
-   fetch("http://localhost:9292/products")
+   fetch("https://protected-lake-99843.herokuapp.com/products")
    .then(resp=> resp.json())
    .then(data => {
      console.log(data)
